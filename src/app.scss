@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap');
+
 *,
 *::after,
 *::before {
@@ -8,6 +10,10 @@
 
 ul {
   list-style: none;
+}
+
+body {
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .container {

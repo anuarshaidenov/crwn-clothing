@@ -1,0 +1,45 @@
+.menu-item {
+  grid-column: span 2;
+  border: 1px solid black;
+  padding: 5rem;
+  display: grid;
+  place-items: center;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-size 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  cursor: pointer;
+
+  &:hover {
+    background-size: 120% 120%;
+  }
+
+  &--large {
+    padding: 8rem 5rem;
+  }
+
+  &:nth-of-type(4n),
+  &:nth-of-type(5n) {
+    grid-column: span 3;
+  }
+
+  &__content {
+    padding: 1rem;
+    text-align: center;
+    background-color: rgba(#fff, 0.7);
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 1.35rem;
+    margin-bottom: 0.375rem;
+    color: #4a4a4a;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 1rem;
+  }
+}
