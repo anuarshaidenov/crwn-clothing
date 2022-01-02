@@ -1,0 +1,36 @@
+.directory-menu {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+}
+
+.menu-item {
+  grid-column: span 2;
+  border: 1px solid black;
+  padding: 5rem;
+  display: grid;
+  place-items: center;
+
+  &--4,
+  &--5 {
+    grid-column: span 3;
+  }
+
+  &__content {
+    padding: 1rem;
+    border: 1px solid black;
+    text-align: center;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 1.35rem;
+    margin-bottom: 0.375rem;
+    color: #4a4a4a;
+  }
+
+  &__subtitle {
+    font-weight: lighter;
+    font-size: 1rem;
+  }
+}
