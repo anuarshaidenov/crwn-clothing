@@ -1,0 +1,19 @@
+.main-button {
+  letter-spacing: 0.5px;
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  background-color: #000;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: inherit;
+  font-weight: bold;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+  }
+}
