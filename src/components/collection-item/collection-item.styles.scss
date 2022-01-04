@@ -1,0 +1,19 @@
+.collection-item {
+  width: 22%;
+  height: 20rem;
+
+  &__image {
+    height: 90%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__flex {
+    height: 10%;
+    padding: 0 0.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

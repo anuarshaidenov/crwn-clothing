@@ -1,0 +1,14 @@
+.collection-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  &__title {
+    font-size: 1.75rem;
+  }
+
+  &__preview {
+    display: flex;
+    justify-content: space-between;
+  }
+}
