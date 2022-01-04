@@ -1,0 +1,25 @@
+.header {
+  padding: 2rem 0;
+
+  .logo-container {
+    width: 4.35rem;
+
+    .logo {
+      width: 100%;
+    }
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav {
+    width: 10%;
+    .nav-links {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
