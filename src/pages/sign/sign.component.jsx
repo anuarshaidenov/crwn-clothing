@@ -5,7 +5,7 @@ import SignIn from '../../components/sign-in/sign-in.compoent';
 
 const SignPage = () => (
   <div className="page">
-    <div class="container">
+    <div className="container">
       <SignIn />
     </div>
   </div>

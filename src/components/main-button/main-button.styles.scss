@@ -1,6 +1,6 @@
 .main-button {
   letter-spacing: 0.5px;
-  padding: 1rem 3rem;
+  padding: 1em 1.75em;
   font-size: 1rem;
   background-color: #000;
   color: #fff;
@@ -15,5 +15,15 @@
     background-color: #fff;
     color: #000;
     border: 1px solid #000;
+  }
+
+  &--google {
+    background-color: #4285f4;
+    color: #fff;
+
+    &:hover {
+      background-color: #357ae8;
+      border: 1px solid transparent;
+    }
   }
 }
