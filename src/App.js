@@ -7,8 +7,9 @@ import ShopPage from './pages/shop/shop.component';
 import SignPage from './pages/sign/sign.component';
 import Header from './components/header/header.component';
 
-import { auth } from './firebase/firebase.utils';
+import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 import { onAuthStateChanged } from 'firebase/auth';
+import { onSnapshot } from 'firebase/firestore';
 
 class App extends React.Component {
   constructor(props) {
@@ -22,10 +23,21 @@ class App extends React.Component {
   unsubsctibeFromAuth = null;
 
   componentDidMount() {
-    this.unsubsctibeFromAuth = onAuthStateChanged(auth, (user) => {
-      this.setState({ currentUser: user });
+    this.unsubsctibeFromAuth = onAuthStateChanged(auth, async (userAuth) => {
+      if (userAuth) {
+        const userRef = await createUserProfileDocument(userAuth);
 
-      console.log(user);
+        onSnapshot(userRef, (snapShot) => {
+          this.setState({
+            currentUser: {
+              id: snapShot.id,
+              ...snapShot.data(),
+            },
+          });
+        });
+      } else {
+        this.setState({ currentUser: userAuth });
+      }
     });
   }
 
