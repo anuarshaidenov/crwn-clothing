@@ -16,6 +16,8 @@
   }
 
   .nav {
+    position: relative;
+
     .nav-links {
       display: flex;
       gap: 2rem;
@@ -27,6 +29,12 @@
       &:hover {
         color: rgba(0, 0, 0, 0.6);
       }
+    }
+
+    &__cart-dropdown {
+      position: absolute;
+      top: 50px;
+      right: -5px;
     }
   }
 }

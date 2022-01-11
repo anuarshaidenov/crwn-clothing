@@ -10,6 +10,7 @@ import { signOut } from 'firebase/auth';
 import { connect } from 'react-redux';
 
 import CartIcon from '../cart-icon/cart-icon.component';
+import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 
 const Header = ({ currentUser }) => (
   <header className="header">
@@ -44,6 +45,7 @@ const Header = ({ currentUser }) => (
             <CartIcon />
           </li>
         </ul>
+        <CartDropdown nav />
       </nav>
     </div>
   </header>
