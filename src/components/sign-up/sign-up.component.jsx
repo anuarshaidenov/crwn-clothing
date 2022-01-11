@@ -31,7 +31,11 @@ class SignUp extends React.Component {
     }
 
     try {
-      const { user } = createUserWithEmailAndPassword(auth, email, password);
+      const { user } = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
 
       await createUserProfileDocument(user, { displayName });
       this.setState({
@@ -57,7 +61,7 @@ class SignUp extends React.Component {
       <div className="sign-up">
         <h2>I do not have an account</h2>
         <span>sign up with your email and password</span>
-        <form className="sign-up__form" onSubmit={this.handleSubmit}>
+        <form className="sign-up__form form" onSubmit={this.handleSubmit}>
           <FormInput
             type="text"
             name="displayName"
