@@ -9,6 +9,8 @@ import { signOut } from 'firebase/auth';
 
 import { connect } from 'react-redux';
 
+import CartIcon from '../cart-icon/cart-icon.component';
+
 const Header = ({ currentUser }) => (
   <header className="header">
     <div className="container">
@@ -37,6 +39,9 @@ const Header = ({ currentUser }) => (
                 SIGN IN
               </Link>
             )}
+          </li>
+          <li>
+            <CartIcon />
           </li>
         </ul>
       </nav>
