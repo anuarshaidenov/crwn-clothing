@@ -32,6 +32,7 @@
     }
 
     &__cart-dropdown {
+      z-index: 5;
       position: absolute;
       top: 50px;
       right: -5px;
