@@ -16,4 +16,9 @@
     gap: 1rem;
     overflow: scroll;
   }
+
+  &__empty-message {
+    font-size: 1.125rem;
+    text-align: center;
+  }
 }

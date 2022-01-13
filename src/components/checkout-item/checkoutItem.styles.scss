@@ -1,0 +1,24 @@
+.checkout-item {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  &__image-container {
+    width: 20%;
+  }
+
+  &__image {
+    width: 80%;
+  }
+
+  span {
+    width: 20%;
+    text-align: center;
+  }
+
+  &__remove {
+    background-color: transparent;
+    border: none;
+    width: 20%;
+  }
+}

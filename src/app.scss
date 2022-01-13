@@ -29,6 +29,10 @@ body {
   width: 95%;
   max-width: 1100px;
   margin: 0 auto;
+
+  &--small {
+    max-width: 700px;
+  }
 }
 
 .page {
