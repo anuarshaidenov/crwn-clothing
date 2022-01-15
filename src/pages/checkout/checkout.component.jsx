@@ -18,12 +18,18 @@ const CheckoutPage = ({ cartItems, cartTotal }) => (
       <li className="checkout-page__header-item">Description</li>
       <li className="checkout-page__header-item">Quantity</li>
       <li className="checkout-page__header-item">Price</li>
-      <li className="checkout-page__header-item ">Remove</li>
+      <li className="checkout-page__header-item checkout-page__header-item--right-aligned">
+        Remove
+      </li>
     </ul>
     <ul className="checkout-page__products">
-      {cartItems.map((cartItem) => (
-        <CheckoutItem key={cartItem.id} cartItem={cartItem} />
-      ))}
+      {cartItems.length ? (
+        cartItems.map((cartItem) => (
+          <CheckoutItem key={cartItem.id} cartItem={cartItem} />
+        ))
+      ) : (
+        <span className="checkout-page__empty-message">Your cart is empty</span>
+      )}
     </ul>
     <div className="checkout-page__footer">Total: ${cartTotal}</div>
   </div>
